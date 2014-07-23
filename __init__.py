@@ -11,6 +11,7 @@ def main(scraper='klove', playlist_name=''):
 	stats = {}
 
 	playlist_name = playlist_name or '%s-%s' % (scraper, date.today())
+	print 'Building playlist %s' % (playlist_name,)
 
 	playlist_object = playlists.playlist()
 	playlist_id = playlist_object.get_or_create_playlist_id(name=playlist_name)
